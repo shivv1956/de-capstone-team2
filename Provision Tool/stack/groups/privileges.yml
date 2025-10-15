@@ -1,0 +1,40 @@
+entries:
+- objectName: RETAIL_PROD
+  objectType: DATABASE
+  privilege_name: USAGE
+  roleName: RETAIL_PROD_RO
+- objectName: RETAIL_PROD
+  objectType: DATABASE
+  privilege_name:
+  - CREATE SCHEMA
+  - MODIFY
+  - MONITOR
+  - USAGE
+  - APPLYBUDGET
+  roleName: RETAIL_PROD_RW
+- objectName: RETAIL_DEV
+  objectType: DATABASE
+  privilege_name: USAGE
+  roleName: RETAIL_DEV_RO
+- objectName: RETAIL_DEV
+  objectType: DATABASE
+  privilege_name:
+  - CREATE SCHEMA
+  - MODIFY
+  - MONITOR
+  - USAGE
+  - APPLYBUDGET
+  roleName: RETAIL_DEV_RW
+- objectName: RETAIL_QA
+  objectType: DATABASE
+  privilege_name: USAGE
+  roleName: RETAIL_QA_RO
+- objectName: RETAIL_QA
+  objectType: DATABASE
+  privilege_name:
+  - CREATE SCHEMA
+  - MODIFY
+  - MONITOR
+  - USAGE
+  - APPLYBUDGET
+  roleName: RETAIL_QA_RW

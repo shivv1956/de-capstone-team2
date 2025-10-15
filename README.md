@@ -36,3 +36,29 @@
 
         9. DimCustomer
 
+
+### Phase 2 : Setup Snowflake Account with Database and Roles
+
+- Used PhData Toolkit to setup Snowflake account, database and roles.
+
+- Setup
+    1. Install Toolkit [Link](https://toolkit.phdata.io/docs/toolkit-cli)
+
+    2. Run the commands
+
+    ```bash
+    toolkit init
+    toolkit provision tutorial # Setup for initial folder structure
+    ```
+
+- To generate the files for groups use the following [link](https://provisiontoolpoc-nkfxytohrlpyqzbsajwdim.streamlit.app/)
+
+- To get the template yaml files use the following [link](https://github.com/Hithesh1334/porvisoin-tool-test-/tree/main/stack/templates)
+
+- Run the following command to test the tool:
+
+```bash
+toolkit provision apply --local # To generate plan.sql file
+
+toolkit provision apply # To deploy in snowflake
+```

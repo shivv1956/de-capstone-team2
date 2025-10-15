@@ -1,0 +1,7 @@
+entries:
+- database: RETAIL_PROD
+  name: MIGRATE
+- database: RETAIL_DEV
+  name: MIGRATE
+- database: RETAIL_QA
+  name: MIGRATE

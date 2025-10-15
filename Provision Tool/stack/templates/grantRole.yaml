@@ -1,0 +1,15 @@
+roleGrants:
+  {%if name is not none%}
+- name: {{name}}
+  {%endif%}
+  {%if toRoles is not none%}
+  toRoles:
+  - {{toRoles}}
+  {%endif%}
+  {%if toUsers is not none%}
+  toUsers:
+  - {{toUsers}}
+  {%endif%}
+  {%if owner is not none%}
+  owner: {{owner}}
+  {%endif%}

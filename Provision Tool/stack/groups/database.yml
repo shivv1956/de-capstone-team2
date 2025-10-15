@@ -1,0 +1,4 @@
+entries:
+- name: RETAIL_PROD
+- name: RETAIL_DEV
+- name: RETAIL_QA

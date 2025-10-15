@@ -1,0 +1,13 @@
+privilegeGrants:
+  {%if privilege_name is not none%}
+- privilege: {{privilege_name}}
+  {%endif%}
+  {%if objectType%}
+  objectType: {{objectType}}
+  {%endif%}
+  {%if objectName%}
+  objectName: {{objectName}}
+  {%endif%}
+  {%if roleName%}
+  roleName: {{roleName}}
+  {%endif%}

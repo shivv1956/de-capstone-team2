@@ -1,0 +1,43 @@
+fileFormats:
+- name: {{name}}
+  database : {{database}}
+  schema : {{schema}}
+  fileType: {{fileType}}
+  properties:
+    {%if allow_duplicate is not none%}
+    allow_duplicate: {{allow_duplicate}}
+    {%endif%}
+    {%if compression is not none%}
+    compression: {{compression}}
+    {%endif%}
+    {% if date_format is not none %}
+    date_format: {{date_format}}
+    {%endif%}
+    {%if enable_octal is not none%}
+    enable_octal: {{enable_octal}}
+    {%endif%}
+    {%if ignore_utf8_errorsil is not none%}
+    ignore_utf8_errorsil: {{ignore_utf8_errors}}
+    {%endif%}
+    {%if skip_byte_order_mark is not none%}
+    skip_byte_order_mark: {{skip_byte_order_mark}}
+    {%endif%}
+    {%if strip_outer_array is not none%}
+    strip_outer_array: {{strip_outer_array}}
+    {%endif%}
+    {%if time_format is not none%}
+    time_format: {{time_format}}
+    {%endif%}
+    {%if timestamp_format is not none%}
+    timestamp_format: {{timestamp_format}}
+    {%endif%}
+    {%if trim_space is not none%}
+    trim_space: {{trim_space}}
+    {%endif%}
+    {%if strip_null_values is not none%}
+    strip_null_values: {{strip_null_values}}
+    {%endif%}
+    {%if binary_format is not none%}
+    binary_format: {{binary_format}}
+    {%endif%}
+
