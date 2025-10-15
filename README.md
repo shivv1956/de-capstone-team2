@@ -1,29 +1,38 @@
-# README #
+## SQL Server to Snowflake Data Migration ###
 
-This README would normally document whatever steps are necessary to get your application up and running.
+### Overview
 
-### What is this repository for? ###
+- Capstone project for ADE 2025 Batch (Chethan R, Shiva S, Ramanujan S)
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+- Migrating data from a hosted SQL Server database (on AWS RDS) to Snowflake.
 
-### How do I get set up? ###
+- Tools used: Python, Snowflake, Dbeaver, AWS RDS, Snowflake, Fivetran, DBT.
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+### Phase 1 : Data Setup
 
-### Contribution guidelines ###
+- Loaded data into hosted SQL Server database using Dbeaver.
 
-* Writing tests
-* Code review
-* Other guidelines
+- Database Link : [Database](https://learn.microsoft.com/en-us/sql/samples/adventureworks-install-configure?view=sql-server-ver17&tabs=ssms)
 
-### Who do I talk to? ###
+- Total of 31 tables to create and load, and we as a team executed for 9 tables. [Script Link](./Data%20Setup/instawdbdw.sql)
 
-* Repo owner or admin
-* Other community or team contact
+    - Tables (Created, loaded data, primary key and foreign key constraints):
+
+        1. DatabaseLog
+
+        2. AdventureWorksDWBuildVersion
+
+        3. DimDate
+
+        4. DimDepartmentGroup
+
+        5. DimEmployee
+
+        6. DimGeography
+
+        7. DimAccount
+
+        8. DimCurrency
+
+        9. DimCustomer
+
