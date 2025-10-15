@@ -14,7 +14,7 @@
 
 - Database Link : [Database](https://learn.microsoft.com/en-us/sql/samples/adventureworks-install-configure?view=sql-server-ver17&tabs=ssms)
 
-- Total of 31 tables to create and load, and we as a team executed for 9 tables. [Script Link](./Data%20Setup/instawdbdw.sql)
+- Total of 31 tables to create and load, and we as a team executed for 9 tables. [Script Link](./Data%20Setup/instawdbdw.txt)
 
     - Tables (Created, loaded data, primary key and foreign key constraints):
 
