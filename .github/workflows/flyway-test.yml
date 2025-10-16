@@ -3,7 +3,7 @@ name: Flyway Migration - Test
 on:
   push:
     branches:
-      - UAT
+      - QA
   workflow_dispatch:
 
 jobs:
