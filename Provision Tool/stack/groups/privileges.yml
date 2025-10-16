@@ -1,9 +1,9 @@
 entries:
-- objectName: RETAIL_PROD
+- objectName: PRODUCTION_DB
   objectType: DATABASE
   privilege_name: USAGE
   roleName: RETAIL_PROD_RO
-- objectName: RETAIL_PROD
+- objectName: PRODUCTION_DB
   objectType: DATABASE
   privilege_name:
   - CREATE SCHEMA
@@ -12,11 +12,11 @@ entries:
   - USAGE
   - APPLYBUDGET
   roleName: RETAIL_PROD_RW
-- objectName: RETAIL_DEV
+- objectName: DEV_DB
   objectType: DATABASE
   privilege_name: USAGE
   roleName: RETAIL_DEV_RO
-- objectName: RETAIL_DEV
+- objectName: DEV_DB
   objectType: DATABASE
   privilege_name:
   - CREATE SCHEMA
@@ -25,11 +25,11 @@ entries:
   - USAGE
   - APPLYBUDGET
   roleName: RETAIL_DEV_RW
-- objectName: RETAIL_QA
+- objectName: QA_DB
   objectType: DATABASE
   privilege_name: USAGE
   roleName: RETAIL_QA_RO
-- objectName: RETAIL_QA
+- objectName: QA_DB
   objectType: DATABASE
   privilege_name:
   - CREATE SCHEMA

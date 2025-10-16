@@ -1,4 +1,4 @@
 entries:
-- name: RETAIL_PROD
-- name: RETAIL_DEV
-- name: RETAIL_QA
+- name: PRODUCTION_DB
+- name: DEV_DB
+- name: QA_DB
