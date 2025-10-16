@@ -77,11 +77,11 @@
 
 - Run the following command to test the tool:
 
-```bash
-toolkit provision apply --local # To generate plan.sql file
+    ```bash
+    toolkit provision apply --local # To generate plan.sql file
 
-toolkit provision apply # To deploy in snowflake
-```
+    toolkit provision apply # To deploy in snowflake
+    ```
 
 ### Phase 3 : Data Migration using Fivetran
 
