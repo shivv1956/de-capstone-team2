@@ -6,7 +6,7 @@
 
 - Migrating data from a hosted SQL Server database (on AWS RDS) to Snowflake.
 
-- Tools used: Python, Snowflake, Dbeaver, AWS RDS, Snowflake, Fivetran, DBT.
+- Tools used: Python, Snowflake, Dbeaver, AWS RDS, Snowflake, Fivetran, Flyway, PhData Toolkit.
 
 ### Phase 1 : Data Setup
 
@@ -14,7 +14,7 @@
 
 - Database Link : [Database](https://learn.microsoft.com/en-us/sql/samples/adventureworks-install-configure?view=sql-server-ver17&tabs=ssms)
 
-- Total of 31 tables to create and load, and we as a team executed for 9 tables. [Script Link](./Data%20Setup/instawdbdw.txt)
+- Total of 31 tables to create and load, and we as a team executed for 9 tables. There are also 5 views, 2 UDF's [Script Link](./Data%20Setup/instawdbdw.txt)
 
     - Tables (Created, loaded data, primary key and foreign key constraints):
 
@@ -35,6 +35,26 @@
         8. DimCurrency
 
         9. DimCustomer
+    
+    - Views (Created):
+
+        1. vDMPrep
+
+        2. vTimeSeries
+
+        3. vTargetMail
+
+        4. vAssocSeqOrders
+
+        5. vAssocSeqLineItems
+    
+    - User Defined Functions (Created):
+
+        1. udfBuildISO8601Date
+
+        2. udfMinimumDate
+
+        3. udfTwoDigitZeroFill
 
 
 ### Phase 2 : Setup Snowflake Account with Database and Roles
@@ -62,3 +82,12 @@ toolkit provision apply --local # To generate plan.sql file
 
 toolkit provision apply # To deploy in snowflake
 ```
+
+### Phase 3 : Data Migration using Fivetran
+
+- Used Fivetran to migrate data to raw database in Snowflake.
+
+- This database acts as a staging area for further transformations.
+
+
+### Phase 4 : Data Validation Tool Setup
