@@ -1,0 +1,27 @@
+name: Flyway Migration - Dev
+
+on:
+  push:
+    branches:
+      - dev
+  workflow_dispatch:
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    container:
+      image: flyway/flyway:10.10.0
+    environment: dev
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run Flyway Migration (Dev)
+        run: |
+          export JAVA_ARGS="--add-opens=java.base/java.nio=ALL-UNNAMED"
+          flyway -user=${{ secrets.DEV_DB_USER }} \
+                 -password="${{ secrets.DEV_DB_PASS }}" \
+                 -configFiles=configs/dev.conf \
+                 -X migrate
+

@@ -1,0 +1,25 @@
+name: Flyway Migration - Prod
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    container:
+      image: flyway/flyway:10.10.0
+    environment: prod 
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run Flyway Migration (Prod)
+        run: |
+          export JAVA_ARGS="--add-opens=java.base/java.nio=ALL-UNNAMED"
+          flyway -user=${{ secrets.PROD_DB_USER }} \
+                 -password="${{ secrets.PROD_DB_PASS }}" \
+                 -configFiles=configs/prod.conf \
+                 -X migrate
