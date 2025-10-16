@@ -118,7 +118,7 @@
     toolkit ds diff source:profile:new target:profile:new # Generate diff json file for comparison
     toolkit ds show source.target:diff:latest --format html -o # Generate html report using the diff json file
     ```
-    Results : [UI View](./Data%20Source%20Tool/MigrationReport.png) | [HTML Report](./Data%20Source%20Tool/sap_source.sap_target_diff_2025-10-16T140001.969Z.html)
+    Results (Data Validation for Raw Database) : [UI View](./Data%20Source%20Tool/MigrationReport.png) | [HTML Report](./Data%20Source%20Tool/sap_source.sap_target_diff_2025-10-16T140001.969Z.html)
 
 
 ### Phase 5 : SQL Translation
@@ -146,3 +146,16 @@
         ```bash
         toolkit sql translate mssql snowflake --input SQLServer --output Snowflake
         ```
+
+### Phase 6 : Deployment using Flyway and Data Validation in Test Environment
+
+- As we have migrated the data to Snowflake raw database, we have to shift this to our development database (we will be deploying the views and UDF's also here).
+
+- Migrate data from development to test
+      - Validate tables here --> We do this here because extra columns may have been added while    migrating using Fivetran in the raw database. (using PhData Data Source Tool)
+
+      - Validate the views and UDF's also here. (using PhData Data Source Tool)
+
+      - Deploy data from test to production database, ready for further analysis.
+
+- Flyway Setup [Github Repo](https://github.com/xyz05770-sketch/de-capstone-team2/tree/dev)
