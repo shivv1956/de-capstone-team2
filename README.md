@@ -91,3 +91,58 @@
 
 
 ### Phase 4 : Data Validation Tool Setup
+
+- Data Validation for migrated tables from SQL Server to Snowflake using Data Source Tool (PhData Toolkit)
+
+- Setup
+
+    1. Run the commands
+
+    ```bash
+    toolkit init
+    toolkit ds list # Run after configuration of toolkit.conf file with necessary datasources and profiles
+    ```
+
+    To learn more about setting up the data source tool refer this [link](https://toolkit.phdata.io/docs/data-source)
+
+    2. To scan the datasources (create json files for comparison)
+
+    ```bash
+    toolkit ds scan <source_name>
+    toolkit ds scan <target_name>
+    ```
+
+    3. To compare the datasources
+
+    ```bash
+    toolkit ds diff source:profile:new target:profile:new # Generate diff json file for comparison
+    toolkit ds show source.target:diff:latest --format html -o # Generate html report using the diff json file
+    ```
+    Results : [UI View](./Data%20Source%20Tool/MigrationReport.png) | [HTML Report](./Data%20Source%20Tool/sap_source.sap_target_diff_2025-10-16T140001.969Z.html)
+
+
+### Phase 5 : SQL Translation
+
+- SQL Translation from SQL Server to Snowflake using SQL Translation Tool (PhData Toolkit)
+
+- Create the following folder structure:
+
+    ```bash
+    SQL Translation Tool
+    ├── Snowflake
+    ├── SQLServer
+    ```
+
+    - Initialize the toolkit:
+
+        ```bash
+        toolkit init
+        ```
+
+    - All the scripts for the UDF's and Views created in SQL Server are placed in the `SQLServer` folder.
+
+    - Run the following command to translate the scripts:
+
+        ```bash
+        toolkit sql translate mssql snowflake --input SQLServer --output Snowflake
+        ```
