@@ -27,5 +27,9 @@ jobs:
           flyway -user=${{ secrets.DEV_DB_USER }} \
                  -password="${{ secrets.DEV_DB_PASS }}" \
                  -configFiles=configs/dev.conf \
+                 -X repair
+          flyway -user=${{ secrets.DEV_DB_USER }} \
+                 -password="${{ secrets.DEV_DB_PASS }}" \
+                 -configFiles=configs/dev.conf \
                  -X migrate
 
