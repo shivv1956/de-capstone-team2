@@ -158,4 +158,4 @@
 
       - Deploy data from test to production database, ready for further analysis.
 
-- Flyway Setup [Github Repo](https://github.com/xyz05770-sketch/de-capstone-team2/tree/dev)
+- Flyway Setup [Github Repo](https://github.com/shivv1956/de-capstone-team2/tree/dev)
