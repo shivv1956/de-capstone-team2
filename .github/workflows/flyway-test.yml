@@ -1,9 +1,13 @@
 name: Flyway Migration - Test
 
+
 on:
   push:
     branches:
       - QA
+    paths-ignore:
+      - 'README.md'
+      - '*.md'
   workflow_dispatch:
 
 jobs:

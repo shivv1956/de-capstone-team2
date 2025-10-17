@@ -1,9 +1,13 @@
 name: Flyway Migration - Prod
 
+
 on:
   push:
     branches:
       - main
+    paths-ignore:
+      - 'README.md'
+      - '*.md'
   workflow_dispatch:
 
 jobs:
