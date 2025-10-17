@@ -14,7 +14,7 @@ jobs:
   migrate:
     runs-on: ubuntu-latest
     container:
-      image: flyway/flyway:10.10.0
+      image: flyway/flyway:11.14.1
     environment: dev
 
     steps:
