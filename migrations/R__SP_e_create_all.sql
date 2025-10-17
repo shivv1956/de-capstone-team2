@@ -1,1 +1,0 @@
-CALL ${CURRENT_SCHEMA}.sp_create_all_tables_from_raw();
