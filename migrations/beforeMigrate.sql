@@ -68,15 +68,20 @@ BEGIN
         EXECUTE IMMEDIATE create_sql;
         
         -- Build the dynamic SQL for dropping Fivetran columns (if they exist)
-        alter_sql_fivetran_deleted := 'ALTER TABLE ${CURRENT_SCHEMA}.' || table_record.table_name || 
-                    ' DROP COLUMN IF EXISTS _FIVETRAN_DELETED';
+        -- alter_sql_fivetran_deleted := 
         
-        alter_sql_fivetran_synced:= 'ALTER TABLE ${CURRENT_SCHEMA}.' || table_record.table_name || 
+        EXECUTE IMMEDIATE 'ALTER TABLE ${CURRENT_SCHEMA}.' || table_record.table_name || 
+                    ' DROP COLUMN IF EXISTS _FIVETRAN_DELETED';
+
+        -- EXECUTE IMMEDIATE alter_sql_fivetran_deleted;
+
+        --alter_sql_fivetran_synced:= 
+        EXECUTE IMMEDIATE 'ALTER TABLE ${CURRENT_SCHEMA}.' || table_record.table_name || 
                     ' DROP COLUMN IF EXISTS _FIVETRAN_SYNCED';
 
         -- Execute the ALTER TABLE statement  
-        EXECUTE IMMEDIATE alter_sql_fivetran_deleted;
-        EXECUTE IMMEDIATE alter_sql_fivetran_synced;
+        
+        -- EXECUTE IMMEDIATE alter_sql_fivetran_synced;
         
         -- Track progress
         table_count := table_count + 1;
