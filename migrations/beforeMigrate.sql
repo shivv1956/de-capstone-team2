@@ -60,7 +60,7 @@ BEGIN
     -- Loop through all tables in raw_db with flexible schema matching
     FOR table_record IN table_cursor DO
         -- Build full table reference
-        full_table_name := 'raw_db.' || table_record.table_schema || '.' || table_record.table_name;
+        full_table_name := '${RAW_DATABASE_NAME}.' || table_record.table_schema || '.' || table_record.table_name;
         
         -- Build the dynamic SQL for creating table
         create_sql := 'CREATE TABLE IF NOT EXISTS ' || '${CURRENT_SCHEMA}.' || table_record.table_name || 
