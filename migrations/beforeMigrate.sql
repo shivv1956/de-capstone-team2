@@ -97,6 +97,7 @@ $$;
 
 CALL ${CURRENT_SCHEMA}.sp_create_all_tables_from_raw();
 
+DROP PROCEDURE ${CURRENT_SCHEMA}.sp_create_all_tables_from_raw();
 
 
 
