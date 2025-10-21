@@ -1,6 +1,4 @@
--- Repeatable migration for stored procedure
--- This will be re-applied whenever the file changes
-CREATE OR REPLACE SCHEMA  ${CURRENT_SCHEMA};
+CREATE SCHEMA IF NOT EXISTS ${CURRENT_SCHEMA};
 
 
 
