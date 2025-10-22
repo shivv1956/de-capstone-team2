@@ -1,7 +1,0 @@
-CREATE OR REPLACE FUNCTION ${CURRENT_SCHEMA}.udfTwoDigitZeroFill(number INT)
-RETURNS CHAR(2)
-LANGUAGE SQL
-AS
-$$
-    LPAD(CAST(number AS STRING), 2, '0')
-$$;
