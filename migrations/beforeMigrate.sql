@@ -45,7 +45,7 @@ DECLARE
     table_cursor CURSOR FOR 
         SELECT table_schema, table_name 
         FROM ${RAW_DATABASE_NAME}.information_schema.tables 
-        WHERE table_schema = 'SQL_SERVER_DBO'
+        WHERE table_schema = ${RAW_DATABASE_SCHEMA}
         AND table_type = 'BASE TABLE'
         ORDER BY table_name;
     
@@ -97,6 +97,7 @@ $$;
 
 CALL ${CURRENT_SCHEMA}.sp_create_all_tables_from_raw();
 
+DROP PROCEDURE ${CURRENT_SCHEMA}.sp_create_all_tables_from_raw();
 
 
 

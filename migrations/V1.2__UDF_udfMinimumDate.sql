@@ -1,0 +1,15 @@
+CREATE OR REPLACE FUNCTION 
+        ${CURRENT_SCHEMA}.udfMinimumDate(x DATETIME, y DATETIME)
+RETURNS DATETIME
+LANGUAGE SQL
+as
+$$
+BEGIN
+LET z DATETIME;
+    IF (:x <= :y) THEN z := :x;
+ELSE z := :y;
+    END IF;
+RETURN (:z);
+END;
+$$
+;

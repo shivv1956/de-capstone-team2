@@ -1,0 +1,35 @@
+name: Flyway Migration - Dev
+
+on:
+  push:
+    branches:
+      - dev
+    paths-ignore:
+      - 'README.md'
+      - '*.md'
+  workflow_dispatch:
+
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    container:
+      image: flyway/flyway:11.14.1
+    environment: dev
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run Flyway Migration (Dev)
+        run: |
+          export JAVA_ARGS="--add-opens=java.base/java.nio=ALL-UNNAMED"
+          flyway -user=${{ secrets.DEV_DB_USER }} \
+                 -password="${{ secrets.DEV_DB_PASS }}" \
+                 -configFiles=configs/dev.conf \
+                 -X repair
+          flyway -user=${{ secrets.DEV_DB_USER }} \
+                 -password="${{ secrets.DEV_DB_PASS }}" \
+                 -configFiles=configs/dev.conf \
+                 -X migrate
+
