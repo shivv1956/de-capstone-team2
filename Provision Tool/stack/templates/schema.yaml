@@ -1,0 +1,5 @@
+schemas:
+  {%if name is not none%}
+- name: {{name}}
+  database: {{database}}
+  {%endif%}

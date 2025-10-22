@@ -1,0 +1,33 @@
+users:
+- name: {{name}}
+  properties:
+    {%if days_to_expiry is not none%}
+    days_to_expiry: {{days_to_expiry}}
+    {%endif%}
+    {%if default_role is not none%}
+    default_role: {{default_role}}
+    {%endif%}
+    {%if default_warehouse is not none%}
+    default_warehouse: {{default_warehouse}}
+    {%endif%}
+    {%if display_name is not none%}
+    display_name: {{display_name}}
+    {%endif%}
+    {%if email is not none%}
+    email: {{email}}
+    {%endif%}
+    {%if login_name is not none%}
+    login_name: {{login_name}}
+    {%endif%}
+    {%if must_change_password is not none%}
+    must_change_password: {{must_change_password}}
+    {%endif%}
+    {%if password is not none%}
+    password: {{password}}
+    {%endif%}
+    {%if rsa_public_key is not none%}
+    rsa_public_key: {{rsa_public_key}}
+    {%endif%}
+    {%if rsa_public_key_2 is not none%}
+    rsa_public_key_2: {{rsa_public_key_2}}
+    {%endif%}

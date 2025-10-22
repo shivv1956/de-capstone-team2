@@ -1,0 +1,12 @@
+defaults:
+  default_warehouse: RETAIL_ADHOC_WH
+entries:
+- default_role: SYSADMIN
+  name: RCHETHAN
+  password: Temp#1234@
+- default_role: SYSADMIN
+  name: SPSHIVA
+  password: Temp#1234@
+- default_role: SYSADMIN
+  name: SRAMANUJAN
+  password: Temp#1234@

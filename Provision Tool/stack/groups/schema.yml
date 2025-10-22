@@ -1,0 +1,7 @@
+entries:
+- database: PRODUCTION_DB
+  name: DBO
+- database: DEV_DB
+  name: DBO
+- database: QA_DB
+  name: DBO

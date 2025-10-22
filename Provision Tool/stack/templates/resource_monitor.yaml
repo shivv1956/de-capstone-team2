@@ -1,0 +1,38 @@
+resourceMonitors:
+- name: {{name}}
+  {%if creditQuota is not none%}
+  creditQuota: {{creditQuota}}
+  {%endif%}
+  {%if frequency is not none%}
+  frequency: {{frequency}}
+  {%endif%}
+  triggers:
+    {%if Action_Notify1 is not none%}
+  - threshold: {{Action_Notify1}}
+    action: "Notify"
+    {%endif%}
+    {%if Action_Notify2 is not none%}
+  - threshold: {{Action_Notify2}}
+    action: "Notify"
+    {%endif%}
+    {%if Action_Notify3 is not none%}
+  - threshold: {{Action_Notify3}}
+    action: "Notify"
+    {%endif%}
+    {%if Action_Notify4 is not none%}
+  - threshold: {{Action_Notify4}}
+    action: "Notify"
+    {%endif%}
+    {%if Action_Notify5 is not none%}
+  - threshold: {{Action_Notify5}}
+    action: "Notify"
+    {%endif%}
+    {%if Action_suspend is not none%}
+  - threshold: {{Action_suspend}}
+    action: "suspend"
+    {%endif%}
+    {%if Action_suspend_immediately is not none%}
+  - threshold: {{Action_suspend_immediately}}
+    action: "suspend immediately"
+    {%endif%}
+      

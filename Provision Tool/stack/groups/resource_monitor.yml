@@ -1,0 +1,5 @@
+entries:
+- creditQuota: 20
+  startTimestamp: 2025-10-15T16:50:00Z
+  frequency: Daily
+  name: LOAD_MONITOR

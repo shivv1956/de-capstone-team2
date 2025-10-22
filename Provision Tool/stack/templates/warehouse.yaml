@@ -1,0 +1,38 @@
+warehouses:
+- name: {{name}}
+  properties:
+    {%if auto_resume is not none%}
+    auto_resume: {{auto_resume}}
+    {%endif%}
+    {%if auto_suspend is not none%}
+    auto_suspend: {{auto_suspend}}
+    {%endif%}
+    {%if enable_query_acceleration is not none%}
+    enable_query_acceleration: {{enable_query_acceleration}}
+    {%endif%}
+    initially_suspended: {{initially_suspended}}
+    {%if resource_monitor is not none%}
+    resource_monitor: {{resource_monitor}}
+    {%endif}
+    warehouse_size: {{warehouse_size}}
+    {%if warehouse_type is not none%}
+    warehouse_type: {{warehouse_type}}
+    {%endif%}
+    {%if max_cluster_count is not none%}
+    max_cluster_count: {{max_cluster_count}}
+    {%endif%}
+    {%if min_cluster_count is not none%}
+    min_cluster_count: {{min_cluster_count}}
+    {%endif%}
+    {%if max_concurrency_level is not none%}
+    max_concurrency_level: {{max_concurrency_level}}
+    {%endif%}
+    {%if statement_queued_timeout_in_seconds is not none%}
+    statement_queued_timeout_in_seconds: {{statement_queued_timeout_in_seconds}}
+    {%endif%}
+    {%if statement_timeout_in_seconds is not none%}
+    Statement_timout_in_seconds: {{Statement_timout_in_seconds}}
+    {%endif%}
+    {%if destroy is not none%}
+    destroy: {{destroy}}
+    {%endif%}

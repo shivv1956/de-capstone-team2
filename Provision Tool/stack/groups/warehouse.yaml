@@ -1,0 +1,5 @@
+entries:
+- initially_suspended: 'True'
+  name: RETAIL_ADHOC_WH
+  warehouse_size: X-Small
+  warehouse_type: STANDARD
