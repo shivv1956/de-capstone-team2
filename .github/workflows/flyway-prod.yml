@@ -26,4 +26,9 @@ jobs:
           flyway -user=${{ secrets.PROD_DB_USER }} \
                  -password="${{ secrets.PROD_DB_PASS }}" \
                  -configFiles=configs/prod.conf \
+                 -X repair
+                 
+          flyway -user=${{ secrets.PROD_DB_USER }} \
+                 -password="${{ secrets.PROD_DB_PASS }}" \
+                 -configFiles=configs/prod.conf \
                  -X migrate
