@@ -51,7 +51,7 @@ FROM
         END
       ) AS Bikes
     FROM
-      dbo.vDMPrep
+      ${CURRENT_SCHEMA}.vDMPrep
     GROUP BY
       CustomerKey,
       Region,
