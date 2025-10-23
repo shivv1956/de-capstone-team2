@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-# de-capstone-team2
-Flyway Migrations for Capstone Project
-=======
-## SQL Server to Snowflake Data Migration ###
+## SQL Server to Snowflake Data Migration 
 
 ### Overview
 
@@ -162,8 +158,6 @@ Flyway Migrations for Capstone Project
 
       - Deploy data from test to production database, ready for further analysis.
 
-- Flyway Setup [Github Repo](https://github.com/shivv1956/de-capstone-team2/tree/dev)
->>>>>>> 19e36a6f1f70565db6066382cdbddec01bf03377
 
 - Flyway facilitates database migration with version control through the help of CI/CD pipelines.
 
@@ -177,7 +171,6 @@ Flyway Migrations for Capstone Project
 
     4. Finally, deploy this data to Production environment using Flyway.
 
-### Setup
 
 - Install Flyway --> [link](https://www.red-gate.com/hub/product-learning/flyway/installing-and-upgrading-the-flyway-cli)
 
